@@ -8,9 +8,17 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: 'My first page with Gatsby',
-    author: 'Diego Matheus Campos'
+    author: 'Diego Matheus Campos',
   },
   plugins: [
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
+      },
+    },
+    `gatsby-transformer-remark`,
   ],
-}
+};
