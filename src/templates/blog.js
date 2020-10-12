@@ -19,7 +19,6 @@ function Blog(props) {
     <Layout>
         <h1>{props.data.markdownRemark.frontmatter.title}</h1>
         <p>{props.data.markdownRemark.frontmatter.date}</p>
-        {console.log(props.data.markdownRemark.html)}
         <div dangerouslySetInnerHTML={{__html: props.data.markdownRemark.html}} />
     </Layout>
   );
